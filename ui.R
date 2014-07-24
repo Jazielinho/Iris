@@ -7,8 +7,10 @@ shinyUI(fluidPage(
                   selectInput("variable","Select Variable",
                               names(iris)),
                   br(),
-                  p(The code is is:)
-                  ),
+                  p("The code is is:",
+                  a("this link",
+                    href = "https://github.com/Jazielinho/Iris")
+                  )),
             mainPanel(
                   tabsetPanel(type = "tabs",
                               tabPanel("Plot", plotOutput("plot")),
